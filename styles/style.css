@@ -45,15 +45,12 @@ main {
 }
 
 .scene {
-  width: 100%;
-  max-width: 810px;
-  aspect-ratio: 810 / 360;
+  position: relative;
+  width: 810px;
+  height: 360px;
   background: #ff0000;
   overflow: hidden;
-  position: relative;
-  margin: 0 auto;
 }
-
 
 .bars {
   position: absolute;
@@ -66,9 +63,7 @@ main {
   background-image:
     repeating-linear-gradient(to right, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-width) + var(--bar-thickness))),
     repeating-linear-gradient(to bottom, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-height) + var(--bar-thickness)));
-  background-repeat: no-repeat;
 }
-
 
 .name-text {
   font-family: 'Bangers', sans-serif;
@@ -137,42 +132,11 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw !important;
-  height: 100vh !important;
+  width: 100vw;
+  height: 100vh;
   z-index: 1;
   pointer-events: none;
-  display: block;
 }
-
-@media (max-width: 768px) {
-  .name-text {
-    font-size: 2rem;
-    padding: 0 16px;
-  }
-
-  .nickname {
-    font-size: 1.2rem;
-  }
-
-  .about-me {
-    width: 90%;
-    padding: 20px;
-    font-size: 0.95rem;
-  }
-
-  .topbar ul {
-    flex-direction: column;
-    gap: 8px;
-    padding: 10px;
-  }
-
-  .scene {
-    width: 100%;
-    aspect-ratio: 810 / 360;
-    background: black;
-  }
-}
-
 
 /* === CONTENT SECTIONS === */
 .about-me {
