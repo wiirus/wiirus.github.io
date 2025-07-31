@@ -1,8 +1,8 @@
+/* style.css */
 .section-spacing {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
 
 /* === CONFIGURATION === */
 :root {
@@ -44,19 +44,28 @@ main {
   z-index: 2;
 }
 
+/* === RESPONSIVE, ASPECT-RATIO-LOCKED SCENE === */
 .scene {
-  width: 100%;
-  max-width: 100vw;
-  aspect-ratio: 9 / 4; /* 810 / 360 = 2.25 */
-  max-height: 100vh;
-  background: #ff8c00;
+  aspect-ratio: 9 / 4; /* same 810 ÷ 360 = 2.25 */
+  width: 60vw;
+  height: auto;
   margin: 0 auto;
+  background: #ff0000;
   overflow: hidden;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
+@media (max-aspect-ratio: 9/4) {
+  .scene {
+    width: auto;
+    height: 60vh;
+  }
+}
+
+/* === remaining style.css rules below unchanged === */
+
+/* ... bars, name-text, animations, dust-layer, content sections, etc. ... */
+
 
 
 
