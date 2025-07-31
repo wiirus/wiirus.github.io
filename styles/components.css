@@ -1,0 +1,78 @@
+/* === COMPONENTS === */
+.bars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(to right, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-width) + var(--bar-thickness))),
+    repeating-linear-gradient(to bottom, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-height) + var(--bar-thickness)));
+}
+
+.name-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 44px;
+  line-height: 1.2;
+  text-shadow: 0 0 20px #ff00004e;
+}
+
+.nickname {
+  font-size: 2rem;
+  text-shadow: 0 0 20px #ff00004e;
+}
+
+.plant1, .plant2, .leaf-silhouette, .leaf-silhouette1 {
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+.plant1, .plant2 {
+  bottom: -20%;
+  transform-origin: bottom center;
+  animation: plant-sway 9s ease-in-out infinite alternate;
+}
+
+.plant1 {
+  left: 65%;
+  width: 400px;
+  animation-delay: 0s;
+}
+
+.plant2 {
+  left: 45%;
+  width: 550px;
+  animation-delay: 1.2s;
+}
+
+.leaf-silhouette, .leaf-silhouette1 {
+  bottom: -10%;
+  width: 400px;
+  animation: plant-sway 9s ease-in-out infinite alternate;
+}
+
+.leaf-silhouette {
+  left: 0%;
+  transform-origin: bottom left;
+}
+
+.leaf-silhouette1 {
+  right: 0%;
+  transform-origin: bottom right;
+}
+
+#dust-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}

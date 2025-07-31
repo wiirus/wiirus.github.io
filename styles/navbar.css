@@ -1,0 +1,33 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+}
+
+.topbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar li a {
+  color: #ddfff7;
+  text-decoration: none;
+  font-family: 'Bangers', sans-serif;
+  font-size: 1.3rem;
+  transition: 0.2s ease;
+  padding: 5px 10px;
+}
+
+.topbar li a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 8px #ff0000;
+}

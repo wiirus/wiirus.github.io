@@ -1,0 +1,16 @@
+/* === ANIMATIONS === */
+@keyframes branch-sway {
+  0%   { transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg); }
+  25%  { transform: rotate(0.3deg) translate(1px, 2px) skew(0.1deg, 0deg); }
+  50%  { transform: rotate(-0.4deg) translate(-1px, 1px) skew(-0.15deg, 0.05deg); }
+  75%  { transform: rotate(0.2deg) translate(0px, -1px) skew(0.05deg, -0.1deg); }
+  100% { transform: rotate(0deg) translate(0px, 2px) skew(0deg, 0deg); }
+}
+
+@keyframes plant-sway {
+  0%   { transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg); }
+  25%  { transform: rotate(0.4deg) translate(0.5px, 1px) skew(0.1deg, 0.1deg); }
+  50%  { transform: rotate(-0.3deg) translate(-0.5px, 0.5px) skew(-0.1deg, 0deg); }
+  75%  { transform: rotate(0.2deg) translate(0px, -0.5px) skew(0.05deg, -0.1deg); }
+  100% { transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg); }
+}

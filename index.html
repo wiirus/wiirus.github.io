@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/layout.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/experience.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/effects.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+</head>
+
+<body>
+  <!-- Top Navigation -->
+  <nav class="topbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education & Credentials</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- Shaking Filter -->
+  <svg width="0" height="0" style="position: absolute">
+    <defs>
+      <filter id="shakeFilter">
+        <feTurbulence id="turbulence" type="turbulence" baseFrequency="0.015" numOctaves="2" result="turb" />
+        <feDisplacementMap in2="turb" in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Dust Effect -->
+  <canvas id="dust-layer"></canvas>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-scene">
+      <div class="scene">
+        <!-- Plants -->
+        <svg class="plant1" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+          <image href="assets/images/plant1.png" width="714" height="512" filter="url(#shakeFilter)" />
+        </svg>
+        <svg class="plant2" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+          <image href="assets/images/plant2.png" width="714" height="512" filter="url(#shakeFilter)" />
+        </svg>
+
+        <!-- Branches -->
+        <svg class="leaf-silhouette" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+          <image href="assets/images/shouette.png" width="714" height="512" filter="url(#shakeFilter)" />
+        </svg>
+        <svg class="leaf-silhouette1" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+          <image href="assets/images/shouette1.png" width="714" height="512" filter="url(#shakeFilter)" />
+        </svg>
+
+        <!-- Window Bars -->
+        <div class="bars"></div>
+      </div>
+
+      <div class="name-text">
+        <div>NİSA NUR ÇELİK</div>
+        <div class="nickname">WİİRUS</div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me">
+      <h2>About Me</h2>
+      <p>
+        I'm a creative developer with a passion for atmospheric design,
+        animated interfaces, and meaningful interaction. Whether it's crafting
+        a portfolio or shaping digital ambience, I aim for depth, precision,
+        and immersion.
+      </p>
+    </section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience">
+  <h2>Experience</h2>
+  <div id="experience-container" class="bubble-grid"></div>
+</section>
+
+    <!-- Placeholder for future Education Section -->
+    <section id="education" class="about-me">
+      <h2>Education</h2>
+      <p>Coming soon...</p>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script src="scripts/dust.js"></script>
+  <script src="scripts/turbulence.js"></script>
+  <script src="scripts/loadExperience.js"></script>
+</body>
+</html>
