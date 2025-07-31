@@ -1,8 +1,8 @@
-/* style.css */
 .section-spacing {
   margin-top: 100px;
   margin-bottom: 100px;
 }
+
 
 /* === CONFIGURATION === */
 :root {
@@ -44,31 +44,13 @@ main {
   z-index: 2;
 }
 
-/* === RESPONSIVE, ASPECT-RATIO-LOCKED SCENE === */
 .scene {
-  aspect-ratio: 9 / 4; /* same 810 ÷ 360 = 2.25 */
-  width: 60vw;
-  height: auto;
-  margin: 0 auto;
+  position: relative;
+  width: 810px;
+  height: 360px;
   background: #ff0000;
   overflow: hidden;
-  position: relative;
 }
-
-@media (max-aspect-ratio: 9/4) {
-  .scene {
-    width: auto;
-    height: 60vh;
-  }
-}
-
-/* === remaining style.css rules below unchanged === */
-
-/* ... bars, name-text, animations, dust-layer, content sections, etc. ... */
-
-
-
-
 
 .bars {
   position: absolute;
@@ -175,4 +157,51 @@ main {
   text-align: center;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Add this to your style.css or layout.css file */
+
+/* Mobile responsiveness for the scene */
+@media (max-width: 768px) {
+  .scene {
+    width: 90vw; /* Use viewport width instead of fixed pixels */
+    max-width: 810px; /* Keep the original max width for larger screens */
+    height: 50vw; /* Maintain aspect ratio */
+    max-height: 360px; /* Keep the original max height */
+  }
+  
+  .name-text {
+    font-size: 2rem; /* Smaller font size for mobile */
+    margin-top: 15px;
+  }
+  
+  .nickname {
+    font-size: 1.5rem; /* Smaller nickname for mobile */
+  }
+  
+  /* Adjust plant sizes for mobile */
+  .plant1, .plant2 {
+    width: 60%; /* Scale plants relative to container */
+  }
+  
+  .leaf-silhouette, .leaf-silhouette1 {
+    width: 50%; /* Scale branches relative to container */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .scene {
+    width: 95vw;
+    height: 55vw;
+  }
+  
+  .name-text {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .nickname {
+    font-size: 1.2rem;
+  }
 }
