@@ -56,23 +56,18 @@ main {
 
 
 .bars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
   background-image:
-    /* vertical bars: black through calc(bar-thickness+1px) */
-    repeating-linear-gradient(
-      to right,
-      black 0px calc(var(--bar-thickness) + 1px),
-      transparent calc(var(--bar-thickness) + 1px)
-                  calc(var(--pane-width) + var(--bar-thickness))
-    ),
-    /* horizontal bars */
-    repeating-linear-gradient(
-      to bottom,
-      black 0px calc(var(--bar-thickness) + 1px),
-      transparent calc(var(--bar-thickness) + 1px)
-                  calc(var(--pane-height) + var(--bar-thickness))
-    );
+    repeating-linear-gradient(to right, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-width) + var(--bar-thickness))),
+    repeating-linear-gradient(to bottom, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-height) + var(--bar-thickness)));
+  background-repeat: no-repeat;
 }
-
 
 
 .name-text {
