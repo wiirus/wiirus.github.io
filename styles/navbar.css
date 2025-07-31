@@ -32,16 +32,15 @@
   text-shadow: 0 0 8px #ff0000;
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 600px) {
   .topbar ul {
-    gap: 16px;          /* tighter spacing */
-    flex-wrap: wrap;    /* allow wrapping to two lines */
+    flex-wrap: wrap;
+    gap: 20px;
   }
+
   .topbar li a {
-    font-size: 1rem;    /* a bit smaller */
-    padding: 4px 6px;   /* reduce touch-area padding */
-  }
-  .topbar {
-    padding: 8px 0;     /* shave off a couple pixels */
+    font-size: 1rem;
+    padding: 4px 6px;
   }
 }
