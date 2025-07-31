@@ -61,8 +61,8 @@ main {
   z-index: 2;
   pointer-events: none;
   background-image:
-    repeating-linear-gradient(to right, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-width) + var(--bar-thickness))),
-    repeating-linear-gradient(to bottom, black 0px var(--bar-thickness), transparent var(--bar-thickness) calc(var(--pane-height) + var(--bar-thickness)));
+    repeating-linear-gradient(to right, black 0px calc(var(--bar-thickness) + 0.5px), transparent calc(var(--bar-thickness) + 0.5px) calc(var(--pane-width) + var(--bar-thickness))),
+    repeating-linear-gradient(to bottom, black 0px calc(var(--bar-thickness) + 0.5px), transparent calc(var(--bar-thickness) + 0.5px) calc(var(--pane-height) + var(--bar-thickness)));
 }
 
 .name-text {
@@ -170,8 +170,8 @@ main {
   .bars {
     /* Use percentage-based bars that scale with the scene container */
     background-image:
-      repeating-linear-gradient(to right, black 0% 1.85%, transparent 1.85% calc(1.85% + (100% - 6 * 1.85%) / 5)),
-      repeating-linear-gradient(to bottom, black 0% 4.17%, transparent 4.17% calc(4.17% + (100% - 3 * 4.17%) / 2));
+      repeating-linear-gradient(to right, black 0% 1.9%, transparent 1.9% calc(1.9% + (100% - 6 * 1.9%) / 5)),
+      repeating-linear-gradient(to bottom, black 0% 4.2%, transparent 4.2% calc(4.2% + (100% - 3 * 4.2%) / 2));
   }
   
   .name-text {
