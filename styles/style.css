@@ -46,11 +46,14 @@ main {
 
 .scene {
   position: relative;
-  width: 810px;
+  width: 90vw;
+  max-width: 810px;
   height: 360px;
-  background: #00ff1a;
+  margin: 0 auto;
+  background: #00a6ff;
   overflow: hidden;
 }
+
 
 .bars {
   position: absolute;
