@@ -159,10 +159,16 @@ main {
   line-height: 1.6;
 }
 
-/* Add this to your style.css or layout.css file */
-
+/* === MOBILE RESPONSIVE === */
 /* Mobile responsiveness for the scene */
 @media (max-width: 768px) {
+  :root {
+    /* Scale bars proportionally - 15px out of 810px = ~1.85% */
+    --bar-thickness: 1.85vw;
+    --pane-width: calc((100% - ((var(--cols) + 1) * var(--bar-thickness))) / var(--cols));
+    --pane-height: calc((100% - ((var(--rows) + 1) * var(--bar-thickness))) / var(--rows));
+  }
+  
   .scene {
     width: 90vw; /* Use viewport width instead of fixed pixels */
     max-width: 810px; /* Keep the original max width for larger screens */
@@ -195,6 +201,11 @@ main {
 
 /* For very small screens */
 @media (max-width: 480px) {
+  :root {
+    /* Scale bars for very small screens - maintaining the same proportion */
+    --bar-thickness: 1.85vw;
+  }
+  
   .scene {
     width: 95vw;
     height: 55vw;
