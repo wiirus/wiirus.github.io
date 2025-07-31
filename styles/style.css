@@ -162,18 +162,16 @@ main {
 /* === MOBILE RESPONSIVE === */
 /* Mobile responsiveness for the scene */
 @media (max-width: 768px) {
-  :root {
-    /* Scale bars proportionally - 15px out of 810px = ~1.85% */
-    --bar-thickness: 1.85vw;
-    --pane-width: calc((100% - ((var(--cols) + 1) * var(--bar-thickness))) / var(--cols));
-    --pane-height: calc((100% - ((var(--rows) + 1) * var(--bar-thickness))) / var(--rows));
-  }
-  
   .scene {
     width: 90vw; /* Use viewport width instead of fixed pixels */
-    max-width: 810px; /* Keep the original max width for larger screens */
-    height: 50vw; /* Maintain aspect ratio */
-    max-height: 360px; /* Keep the original max height */
+    height: calc(90vw * 360 / 810); /* Maintain exact aspect ratio: 360/810 = 0.444 */
+  }
+  
+  .bars {
+    /* Use percentage-based bars that scale with the scene container */
+    background-image:
+      repeating-linear-gradient(to right, black 0% 1.85%, transparent 1.85% calc(1.85% + (100% - 6 * 1.85%) / 5)),
+      repeating-linear-gradient(to bottom, black 0% 1.85%, transparent 1.85% calc(1.85% + (100% - 3 * 1.85%) / 2));
   }
   
   .name-text {
@@ -185,30 +183,25 @@ main {
     font-size: 1.5rem; /* Smaller nickname for mobile */
   }
   
-  /* Maintain plant proportions relative to scene */
+  /* Maintain exact plant proportions relative to scene */
   .plant1 {
-    width: 49%; /* Maintains original 400px/810px ratio (≈49%) */
+    width: 49.38%; /* Exact ratio: 400px/810px */
   }
   
   .plant2 {
-    width: 68%; /* Maintains original 550px/810px ratio (≈68%) */
+    width: 67.90%; /* Exact ratio: 550px/810px */
   }
   
   .leaf-silhouette, .leaf-silhouette1 {
-    width: 49%; /* Maintains original 400px/810px ratio (≈49%) */
+    width: 49.38%; /* Exact ratio: 400px/810px */
   }
 }
 
 /* For very small screens */
 @media (max-width: 480px) {
-  :root {
-    /* Scale bars for very small screens - maintaining the same proportion */
-    --bar-thickness: 1.85vw;
-  }
-  
   .scene {
     width: 95vw;
-    height: 55vw;
+    height: calc(95vw * 360 / 810); /* Maintain exact aspect ratio */
   }
   
   .name-text {
