@@ -45,14 +45,15 @@ main {
 }
 
 .scene {
-  position: relative;
-  width: 90vw;
+  width: 100%;
   max-width: 810px;
-  height: 360px;
+  aspect-ratio: 9 / 4; /* Same as 810 / 360 */
+  background: #ff0099;
   margin: 0 auto;
-  background: #00a6ff;
   overflow: hidden;
+  position: relative;
 }
+
 
 
 .bars {
