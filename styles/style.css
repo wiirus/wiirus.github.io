@@ -179,13 +179,17 @@ main {
     font-size: 1.5rem; /* Smaller nickname for mobile */
   }
   
-  /* Adjust plant sizes for mobile */
-  .plant1, .plant2 {
-    width: 60%; /* Scale plants relative to container */
+  /* Maintain plant proportions relative to scene */
+  .plant1 {
+    width: 49%; /* Maintains original 400px/810px ratio (≈49%) */
+  }
+  
+  .plant2 {
+    width: 68%; /* Maintains original 550px/810px ratio (≈68%) */
   }
   
   .leaf-silhouette, .leaf-silhouette1 {
-    width: 50%; /* Scale branches relative to container */
+    width: 49%; /* Maintains original 400px/810px ratio (≈49%) */
   }
 }
 
