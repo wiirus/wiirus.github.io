@@ -1,5 +1,27 @@
+
 const canvas = document.getElementById('dust-layer');
 const ctx = canvas.getContext('2d');
+
+const sceneEl = document.querySelector('.scene');
+
+function createParticle() {
+  const rect = sceneEl.getBoundingClientRect();
+  return {
+    x: rect.left + Math.random() * rect.width,
+    // spawn in the bottom 30% of the scene itself:
+    y: rect.top + rect.height * 0.7 + Math.random() * (rect.height * 0.3),
+    radius: Math.random() * 2 + 1,
+    dx: (Math.random() - 0.5) * 0.3,
+    dy: -Math.random() * 0.3 - 0.1,
+    baseDy: -Math.random() * 0.3 - 0.1,
+    life: Math.random() * 300 + 200,
+    opacity: 0,
+    fadeIn: true,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    mass: Math.random() * 0.5 + 0.5
+  };
+}
+
 
 let particles = [];
 const maxParticles = 50;
