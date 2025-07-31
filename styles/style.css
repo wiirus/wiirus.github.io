@@ -171,7 +171,7 @@ main {
     /* Use percentage-based bars that scale with the scene container */
     background-image:
       repeating-linear-gradient(to right, black 0% 1.85%, transparent 1.85% calc(1.85% + (100% - 6 * 1.85%) / 5)),
-      repeating-linear-gradient(to bottom, black 0% 1.85%, transparent 1.85% calc(1.85% + (100% - 3 * 1.85%) / 2));
+      repeating-linear-gradient(to bottom, black 0% 4.17%, transparent 4.17% calc(4.17% + (100% - 3 * 4.17%) / 2));
   }
   
   .name-text {
