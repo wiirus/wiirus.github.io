@@ -1,7 +1,7 @@
 /* Bulletin‐board wrapper */
 #experience {
   position: relative;
-  padding: 48px 12px;                     /* 80px→48px, 20px→12px */
+  padding: 18px 12px;                     /* 80px→48px, 20px→12px */
   background: #6f4f2a;
   /* thick wood frame */
   border: 26.4px solid #8b5a2b;            /* 44px→26.4px */
@@ -12,7 +12,7 @@
     0 2.4px 6px rgba(0,0,0,0.2);          /* 4px→2.4px, 10px→6px */
   max-width: 780px;                       /* 1300px→780px */
   margin: 0 auto 36px;                    /* 60px→36px */
-  outline: 10.2px solid #a26d3c;          /* 17px→10.2px */
+  outline: 15.2px solid rgb(152, 104, 53);          /* 17px→10.2px */
   outline-offset: -10.8px;                /* -18px→-10.8px */
   z-index: 2;
 }
@@ -20,7 +20,7 @@
 /* Section title sits “on” the board */
 #experience h2 {
   position: relative;
-  font-family: 'Schoolbell', cursive;
+  font-family: 'Schoolbell';
   letter-spacing: 0.15em;
   font-size: 3.6rem;                      /* 6rem→3.6rem */
   color: rgb(48, 37, 33);
@@ -44,7 +44,7 @@
 /* Sticky-note styling */
 .experience-bubble {
   position: relative;
-  background: linear-gradient(#ae873d,#9c7a3a,#a27c35);
+  background: linear-gradient(#836020,#ae873d,#ae873d,#a27c35);
   border-radius: 0.06rem;                 /* 0.1rem→0.06rem */
   width: 180px;                           /* 300px→180px */
   aspect-ratio: 1 / 1;                    /* perfect square */

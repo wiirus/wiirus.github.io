@@ -34,7 +34,7 @@
 
 @media (max-width: 768px) {
   .topbar ul {
-    gap: 16px;          /* tighter spacing */
+    gap: 9px;          /* tighter spacing */
     flex-wrap: wrap;    /* allow wrapping to two lines */
   }
   .topbar li a {
