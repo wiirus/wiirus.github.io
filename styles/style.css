@@ -1,10 +1,17 @@
+/* =============  GLOBAL SCROLL BEHAVIOR & OFFSET  ============= */
+html {
+  scroll-behavior: smooth;   /* already gives the glide-down effect     */
+  scroll-padding-top: 80px;  /* offsets anchor targets by 80 px so they
+                                appear fully below the fixed nav bar   */
+}
+
+/* =============  SECTION SPACING (UNCHANGED)  ============= */
 .section-spacing {
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
-
-/* === CONFIGURATION === */
+/* =============  CONFIGURATION  ============= */
 :root {
   --cols: 5;
   --rows: 2;
@@ -13,7 +20,7 @@
   --pane-height: calc((100% - ((var(--rows) + 1) * var(--bar-thickness))) / var(--rows));
 }
 
-/* === GLOBAL RESET === */
+/* =============  GLOBAL RESET  ============= */
 * {
   margin: 0;
   padding: 0;
@@ -33,7 +40,7 @@ main {
   width: 100%;
 }
 
-/* === HERO SECTION === */
+/* =============  HERO SECTION  ============= */
 .hero-scene {
   height: 100vh;
   display: flex;
@@ -60,12 +67,8 @@ main {
   pointer-events: none;
   z-index: 3;
 }
-.curtain-left {
-  left: 0;
-}
-.curtain-right {
-  right: 0;
-}
+.curtain-left  { left: 0; }
+.curtain-right { right: 0; }
 
 .bars {
   position: absolute;
@@ -97,24 +100,25 @@ main {
   text-shadow: 0 0 20px #ff00004e;
 }
 
-/* === ANIMATIONS === */
+/* =============  ANIMATIONS  ============= */
 @keyframes branch-sway {
-  0%   { transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg); }
-  25%  { transform: rotate(0.3deg) translate(1px, 2px) skew(0.1deg, 0deg); }
-  50%  { transform: rotate(-0.4deg) translate(-1px, 1px) skew(-0.15deg, 0.05deg); }
-  75%  { transform: rotate(0.2deg) translate(0px, -1px) skew(0.05deg, -0.1deg); }
-  100% { transform: rotate(0deg) translate(0px, 2px) skew(0deg, 0deg); }
+  0%   { transform: rotate(0deg) translate(0,0) skew(0,0); }
+  25%  { transform: rotate(0.3deg) translate(1px,2px) skew(0.1deg,0); }
+  50%  { transform: rotate(-0.4deg) translate(-1px,1px) skew(-0.15deg,0.05deg); }
+  75%  { transform: rotate(0.2deg) translate(0,-1px) skew(0.05deg,-0.1deg); }
+  100% { transform: rotate(0deg) translate(0,2px) skew(0,0); }
 }
 
 @keyframes plant-sway {
-  0%   { transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg); }
-  25%  { transform: rotate(0.4deg) translate(0.5px, 1px) skew(0.1deg, 0.1deg); }
-  50%  { transform: rotate(-0.3deg) translate(-0.5px, 0.5px) skew(-0.1deg, 0deg); }
-  75%  { transform: rotate(0.2deg) translate(0px, -0.5px) skew(0.05deg, -0.1deg); }
-  100% { transform: rotate(0deg) translate(0px, 0px) skew(0deg, 0deg); }
+  0%   { transform: rotate(0deg) translate(0,0) skew(0,0); }
+  25%  { transform: rotate(0.4deg) translate(0.5px,1px) skew(0.1deg,0.1deg); }
+  50%  { transform: rotate(-0.3deg) translate(-0.5px,0.5px) skew(-0.1deg,0); }
+  75%  { transform: rotate(0.2deg) translate(0,-0.5px) skew(0.05deg,-0.1deg); }
+  100% { transform: rotate(0deg) translate(0,0) skew(0,0); }
 }
 
-.plant1, .plant2 {
+.plant1,
+.plant2 {
   position: absolute;
   bottom: -20%;
   height: auto;
@@ -125,10 +129,11 @@ main {
   animation: plant-sway 9s ease-in-out infinite alternate;
 }
 
-.plant1 { left: 65%; animation-delay: 0s; width: 400px; }
+.plant1 { left: 65%; animation-delay: 0s;  width: 400px; }
 .plant2 { left: 45%; animation-delay: 1.2s; width: 550px; }
 
-.leaf-silhouette, .leaf-silhouette1 {
+.leaf-silhouette,
+.leaf-silhouette1 {
   position: absolute;
   bottom: -10%;
   height: auto;
@@ -138,10 +143,10 @@ main {
   animation: plant-sway 9s ease-in-out infinite alternate;
 }
 
-.leaf-silhouette  { left: 0%; transform-origin: bottom left; width: 300px; }
+.leaf-silhouette  { left: 0%;  transform-origin: bottom left;  width: 330px; }
 .leaf-silhouette1 { right: 0%; transform-origin: bottom right; width: 400px; }
 
-/* === DUST LAYER === */
+/* =============  DUST LAYER  ============= */
 #dust-layer {
   position: fixed;
   top: 0;
@@ -152,7 +157,7 @@ main {
   pointer-events: none;
 }
 
-/* === CONTENT SECTIONS === */
+/* =============  CONTENT SECTIONS  ============= */
 .about-me {
   width: 90%;
   max-width: 1000px;
@@ -161,7 +166,8 @@ main {
   background: radial-gradient(ellipse at top, #111 0%, #000 100%);
   border: 1px solid rgba(255, 0, 0, 0.2);
   border-radius: 40px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15), inset 0 0 30px rgba(255, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15),
+              inset 0 0 30px rgba(255, 0, 0, 0.05);
   position: relative;
   z-index: 1;
   display: flex;
@@ -173,35 +179,28 @@ main {
   line-height: 1.6;
 }
 
-/* === MOBILE RESPONSIVE === */
+/* =============  MOBILE RESPONSIVE  ============= */
 @media (max-width: 768px) {
   .scene {
     width: 90vw;
     height: calc(90vw * 360 / 810);
   }
-  
+
   .bars {
     background-image:
       repeating-linear-gradient(to right, black 0% 1.9%, transparent 1.9% calc(1.9% + (100% - 6 * 1.9%) / 5)),
       repeating-linear-gradient(to bottom, black 0% 4.2%, transparent 4.2% calc(4.2% + (100% - 3 * 4.2%) / 2));
   }
-  
-  .name-text {
-    font-size: 2rem;
-    margin-top: 15px;
-  }
-  
-  .nickname {
-    font-size: 1.5rem;
-  }
-  
+
+  .name-text { font-size: 2rem; margin-top: 15px; }
+  .nickname   { font-size: 1.5rem; }
+
   .plant1 { width: 49.38%; }
   .plant2 { width: 67.90%; }
-  .leaf-silhouette, .leaf-silhouette1 { width: 49.38%; }
-  
-  .curtain {
-    height: 100%;
-  }
+  .leaf-silhouette,
+  .leaf-silhouette1 { width: 49.38%; }
+
+  .curtain { height: 100%; }
 }
 
 @media (max-width: 480px) {
@@ -209,13 +208,7 @@ main {
     width: 95vw;
     height: calc(95vw * 360 / 810);
   }
-  
-  .name-text {
-    font-size: 1.5rem;
-    margin-top: 10px;
-  }
-  
-  .nickname {
-    font-size: 1.2rem;
-  }
+
+  .name-text { font-size: 1.5rem; margin-top: 10px; }
+  .nickname   { font-size: 1.2rem; }
 }
