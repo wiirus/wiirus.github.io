@@ -10,14 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&display=swap" rel="stylesheet">
 
   <!-- Core Styles -->
-  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/about.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
   <link rel="stylesheet" href="styles/experience.css" />
   <link rel="stylesheet" href="styles/links.css" />
-  <link rel="stylesheet" href="styles/animations.css" />
-  <link rel="stylesheet" href="styles/style.css" />
   <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
@@ -28,7 +30,15 @@
       <li><a href="#about">About Me</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#education">Education &amp; Credentials</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+      <li class="dropdown">
+        <a href="#portfolio">Portfolio</a>
+        <div class="dropdown-menu">
+          <a href="#2d-art">2D Art</a>
+          <a href="https://cults3d.com/en/users/wiirus" target="_blank">3D Art</a>
+          <a href="#games">Games</a>
+          <a href="assets/data/nisa_nur_celik_CV.pdf#view=FitH" target="_blank">CV</a>
+        </div>
+      </li>
     </ul>
   </nav>
 
@@ -89,18 +99,33 @@
 
     <!-- About Me Section -->
     <section id="about" class="about-me">
-      <h2>About Me</h2>
-      <p>
-        I'm a creative developer with a passion for atmospheric design,
-        animated interfaces, and meaningful interaction. Whether it's crafting
-        a portfolio or shaping digital ambience, I aim for depth, precision,
-        and immersion.
-      </p>
+      <h2 class="section-title">About Me</h2>
+      
+      <div class="content-wrapper">
+        <div class="polaroid">
+          <div class="tape-top"></div>
+          <div class="tape-bottom"></div>
+          <img src="assets/images/photo.webp" alt="wiirus">
+        </div>
+        
+        <div class="paper-text">
+          <div class="handwritten-text">
+            <!--<h3>Hey there!</h3>-->
+            <p>I'm <span class="highlight">Nisa</span>, but you can call me wiirus! I'm a creative developer with a passion for atmospheric design and animated interfaces.</p>
+            
+            <p>Whether it's crafting immersive portfolios or shaping digital ambience, I aim for <span class="highlight">depth, precision, and meaningful interaction</span> in everything I create.</p>
+            
+            <p>When I'm not coding, you'll find me exploring new technologies, working on 3D art, or getting lost in the details of the perfect user experience.</p>
+            
+            <p>Let's create something atmospheric together! ✨</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
-      <h2>Experience</h2>
+      <h2>Work  Experience</h2>
       <div id="experience-container" class="bubble-grid"></div>
     </section>
 

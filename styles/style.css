@@ -1,8 +1,12 @@
 /* =============  GLOBAL SCROLL BEHAVIOR & OFFSET  ============= */
 html {
   scroll-behavior: smooth;   /* already gives the glide-down effect     */
-  scroll-padding-top: 80px;  /* offsets anchor targets by 80 px so they
-                                appear fully below the fixed nav bar   */
+  /*scroll-padding-top: 60px;*/
+   scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: center;
 }
 
 /* =============  SECTION SPACING (UNCHANGED)  ============= */
@@ -54,7 +58,7 @@ main {
 .scene {
   position: relative;
   width: 810px;
-  height: 360px;
+  height: 380px;
   background: #ff0000;
   overflow: hidden;
 }
@@ -156,27 +160,7 @@ main {
   pointer-events: none;
 }
 
-/* =============  CONTENT SECTIONS  ============= */
-.about-me {
-  width: 90%;
-  max-width: 1000px;
-  margin: 100px auto;
-  padding: 60px 40px;
-  background: radial-gradient(ellipse at top, #111 0%, #000 100%);
-  border: 1px solid rgba(255, 0, 0, 0.2);
-  border-radius: 40px;
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.15),
-              inset 0 0 30px rgba(255, 0, 0, 0.05);
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffcccc;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1.6;
-}
+
 
 /* =============  MOBILE RESPONSIVE  ============= */
 @media (max-width: 768px) {

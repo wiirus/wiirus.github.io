@@ -1,33 +1,33 @@
 [
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/yourprofile",
+      "url": "https://www.linkedin.com/in/nisa-nur-çelik-a356ba166",
       "icon": "assets/icons/linkedin.svg"
     },
     {
       "name": "YouTube",
-      "url": "https://youtube.com/@yourchannel",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
       "icon": "assets/icons/youtube.svg"
     }
     ,
     {
       "name": "Discord",
-      "url": "https://discord.com/users/yourusername",
+      "url": "https://discord.com/users/408000061994434571",
       "icon": "assets/icons/discord.svg"
     },
     {
       "name": "Itch.io",
-      "url": "https://yourname.itch.io",
+      "url": "https://wiirus.itch.io",
       "icon": "assets/icons/itchio.svg"
     },
     {
       "name": "ArtStation",
-      "url": "https://artstation.com/yourname",
+      "url": "https://www.artstation.com/wiirus",
       "icon": "assets/icons/artstation.svg"
     },
     {
       "name": "GitHub",
-      "url": "https://github.com/yourusername",
+      "url": "https://github.com/wiirus",
       "icon": "assets/icons/github.svg"
     }
 ]
