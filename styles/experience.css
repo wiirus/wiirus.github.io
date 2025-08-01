@@ -119,7 +119,7 @@
 }
 
 .experience-bubble .description {
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Comic Sans MS', 'Comic Sans';
   font-size: 0.6rem;                      /* 1rem→0.6rem */
   line-height: 1.5;
 }
