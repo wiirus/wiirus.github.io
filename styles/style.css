@@ -65,6 +65,8 @@ main {
   top: 0;
   height: 100%;
   pointer-events: none;
+  height: 200;
+  width: auto;
   z-index: 3;
 }
 .curtain-left  { left: 0; }
