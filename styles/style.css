@@ -1,8 +1,8 @@
 /* =============  GLOBAL SCROLL BEHAVIOR & OFFSET  ============= */
 html {
-  scroll-behavior: smooth;   /* already gives the glide-down effect     */
+  scroll-behavior: smooth;
   /*scroll-padding-top: 60px;*/
-   scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
 }
 
 section {
@@ -52,11 +52,11 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 2;
 }
 
 .scene {
   position: relative;
+  z-index: -3; /* window background behind everything */
   width: 810px;
   height: 380px;
   background: #ff0000;
@@ -68,39 +68,82 @@ main {
   position: absolute;
   top: 0;
   height: 100%;
-  pointer-events: none;
-  height: 200;
   width: auto;
-  z-index: 3;
+  pointer-events: none;
+  z-index: 0; /* above plants/bars, below dust */
 }
 .curtain-left  { left: 0; }
 .curtain-right { right: 0; }
 
+/* Window pane bars */
 .bars {
   position: absolute;
-  inset: 0;    /* shorthand for top:0; right:0; bottom:0; left:0; */
-  z-index: 2;
+  inset: 0;
   pointer-events: none;
+  z-index: -1; /* behind curtains, above plants */
   background-image:
-    repeating-linear-gradient(to right, black 0px calc(var(--bar-thickness) + 0.5px), transparent calc(var(--bar-thickness) + 0.5px) calc(var(--pane-width) + var(--bar-thickness))),
-    repeating-linear-gradient(to bottom, black 0px calc(var(--bar-thickness) + 0.5px), transparent calc(var(--bar-thickness) + 0.5px) calc(var(--pane-height) + var(--bar-thickness)));
+    repeating-linear-gradient(
+      to right,
+      black 0px calc(var(--bar-thickness) + 0.5px),
+      transparent calc(var(--bar-thickness) + 0.5px) calc(var(--pane-width) + var(--bar-thickness))
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      black 0px calc(var(--bar-thickness) + 0.5px),
+      transparent calc(var(--bar-thickness) + 0.5px) calc(var(--pane-height) + var(--bar-thickness))
+    );
 }
 
+/* Swaying plants under curtains */
+.plant1,
+.plant2,
+.leaf-silhouette,
+.leaf-silhouette1 {
+  position: absolute;
+  bottom: -20%;
+  height: auto;
+  pointer-events: none;
+  opacity: 1;
+  transform-origin: bottom center;
+  animation: plant-sway 9s ease-in-out infinite alternate;
+  z-index: -2; /* behind bars and curtains */
+}
+.plant1 { left: 65%; animation-delay: 0s;  width: 400px; }
+.plant2 { left: 45%; animation-delay: 1.2s; width: 550px; }
+.leaf-silhouette  { bottom: -10%; left: 0%;  transform-origin: bottom left;  width: 330px; }
+.leaf-silhouette1 { bottom: -10%; right: 0%; transform-origin: bottom right; width: 400px; }
+
+/* Name and nickname above dust */
 .name-text {
-  font-family: 'Bangers', sans-serif;
+  font-family: 'Bangers', cursive;
   margin-top: 20px;
   text-align: center;
   font-size: 44px;
   line-height: 1.2;
   color: #ddfff7;
   text-shadow: 0 0 40px #ffffff4e;
+  position: relative;
+  z-index: 2; /* above dust */
 }
 
 .nickname {
-  font-family: 'Bangers', sans-serif;
+  font-family: 'Bangers', cursive;
   font-size: 2rem;
   color: #ff0000;
   text-shadow: 0 0 20px #ff00004e;
+  position: relative;
+  z-index: 2; /* above dust */
+}
+
+/* =============  DUST LAYER  ============= */
+#dust-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1; /* over curtains, bars, plants */
+  pointer-events: none;
 }
 
 /* =============  ANIMATIONS  ============= */
@@ -120,69 +163,23 @@ main {
   100% { transform: rotate(0deg) translate(0,0) skew(0,0); }
 }
 
-.plant1,
-.plant2 {
-  position: absolute;
-  bottom: -20%;
-  height: auto;
-  pointer-events: none;
-  opacity: 1;
-  z-index: 1;
-  transform-origin: bottom center;
-  animation: plant-sway 9s ease-in-out infinite alternate;
-}
-
-.plant1 { left: 65%; animation-delay: 0s;  width: 400px; }
-.plant2 { left: 45%; animation-delay: 1.2s; width: 550px; }
-
-.leaf-silhouette,
-.leaf-silhouette1 {
-  position: absolute;
-  bottom: -10%;
-  height: auto;
-  z-index: 1;
-  opacity: 1;
-  pointer-events: none;
-  animation: plant-sway 9s ease-in-out infinite alternate;
-}
-
-.leaf-silhouette  { left: 0%;  transform-origin: bottom left;  width: 330px; }
-.leaf-silhouette1 { right: 0%; transform-origin: bottom right; width: 400px; }
-
-/* =============  DUST LAYER  ============= */
-#dust-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-  pointer-events: none;
-}
-
-
-
 /* =============  MOBILE RESPONSIVE  ============= */
 @media (max-width: 768px) {
   .scene {
     width: 90vw;
     height: calc(90vw * 360 / 810);
   }
-
   .bars {
     background-image:
       repeating-linear-gradient(to right, black 0% 1.9%, transparent 1.9% calc(1.9% + (100% - 6 * 1.9%) / 5)),
       repeating-linear-gradient(to bottom, black 0% 4.2%, transparent 4.2% calc(4.2% + (100% - 3 * 4.2%) / 2));
   }
-
   .name-text { font-size: 2rem; margin-top: 15px; }
   .nickname   { font-size: 1.5rem; }
-
   .plant1 { width: 49.38%; }
   .plant2 { width: 67.90%; }
   .leaf-silhouette,
   .leaf-silhouette1 { width: 49.38%; }
-
   .curtain { height: 100%; }
 }
 
@@ -191,7 +188,6 @@ main {
     width: 95vw;
     height: calc(95vw * 360 / 810);
   }
-
   .name-text { font-size: 1.5rem; margin-top: 10px; }
   .nickname   { font-size: 1.2rem; }
 }

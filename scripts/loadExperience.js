@@ -21,9 +21,15 @@ fetch('assets/data/experience.json')
         : calculateDuration(entry.start, entry.end);
 
       // Build the dates string
+      const hasStart = entry.start && entry.start.trim() !== '';
+      const hasEnd = entry.end && entry.end.trim() !== '';
+
       const datesText =
-        `${entry.start} – ${entry.end}` +
+        (hasStart ? entry.start : '') +
+        (hasStart && hasEnd ? ' – ' : '') +
+        (hasEnd ? entry.end : '') +
         (duration ? ` (${duration})` : '');
+
 
       // Turn each newline into its own <p>
       const descHTML = entry.description

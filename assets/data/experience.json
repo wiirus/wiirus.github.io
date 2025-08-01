@@ -11,13 +11,20 @@
     "company": "Digitech Software Technologies",
     "start": "Jun 2022",
     "end": "Jan 2023",
-    "description": "Designed UI for multiple game projects. Developed concept art for characters, environments, and assets; produced 2D animations; illustrated backgrounds."
+    "description": "• Designed UI for multiple game projects.\n• Developed concept art for characters, environments, and assets.\n• Produced 2D animations.\n• Illustrated backgrounds."
   },
   {
     "position": "System Analyst",
     "company": "Kerry Logistics",
     "start": "Sep 2023",
     "end": "Apr 2025",
-    "description": "Managed and maintained databases using PostgreSQL and Oracle. Automated processes with JavaScript, Python, and VBScript (TestComplete). Modeled and optimized business processes using Camunda. Developed and maintained C# programs with GitHub version control. Performed data analysis and visualization using Microsoft Power BI Desktop. \n Work conducted in English."
+    "description": "• Managed and maintained databases using PostgreSQL and Oracle.\n• Automated processes with JavaScript, Python, and VBScript (TestComplete).\n• Modeled and optimized business processes using Camunda.\n• Developed and maintained C# programs with GitHub version control.\n• Performed data analysis and visualization using Microsoft Power BI Desktop.\n• Work conducted in English."
+  },
+  {
+    "position": "Various Projects",
+    "company": "",
+    "start": "",
+    "end": "",
+    "description": "• Designed and developed this website to showcase my creative and technical work.\n• Use the navigation bar at the top to explore.\n• The Portfolio section links to my ArtStation where I share my 2D artwork.\n• The 3D section contains printable models I’ve created as a hobby.\n• The Games section leads to my itch.io page, featuring games I worked on during 48 hour game jams.\n• You can preview my CV by clicking on the CV tab."
   }
 ]
