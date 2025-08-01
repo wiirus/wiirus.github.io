@@ -1,7 +1,6 @@
 /* =============  GLOBAL SCROLL BEHAVIOR & OFFSET  ============= */
 html {
   scroll-behavior: smooth;
-  /*scroll-padding-top: 60px;*/
   scroll-snap-type: y mandatory;
 }
 
@@ -61,6 +60,7 @@ main {
   height: 380px;
   background: #ff0000;
   overflow: hidden;
+  z-index: -5;
 }
 
 /* Curtains */
@@ -70,7 +70,7 @@ main {
   height: 100%;
   width: auto;
   pointer-events: none;
-  z-index: 0; /* above plants/bars, below dust */
+  z-index: -2; /* above bars and plants, below dust */
 }
 .curtain-left  { left: 0; }
 .curtain-right { right: 0; }
@@ -80,7 +80,7 @@ main {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: -1; /* behind curtains, above plants */
+  z-index: -3; /* behind curtains, above plants */
   background-image:
     repeating-linear-gradient(
       to right,
@@ -94,7 +94,7 @@ main {
     );
 }
 
-/* Swaying plants under curtains */
+/* Swaying plants under bars and curtains */
 .plant1,
 .plant2,
 .leaf-silhouette,
@@ -106,7 +106,10 @@ main {
   opacity: 1;
   transform-origin: bottom center;
   animation: plant-sway 9s ease-in-out infinite alternate;
-  z-index: -2; /* behind bars and curtains */
+  z-index: -4; /* behind bars and curtains */
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .plant1 { left: 65%; animation-delay: 0s;  width: 400px; }
 .plant2 { left: 45%; animation-delay: 1.2s; width: 550px; }
@@ -123,7 +126,7 @@ main {
   color: #ddfff7;
   text-shadow: 0 0 40px #ffffff4e;
   position: relative;
-  z-index: 2; /* above dust */
+  z-index: 5;
 }
 
 .nickname {
@@ -132,7 +135,7 @@ main {
   color: #ff0000;
   text-shadow: 0 0 20px #ff00004e;
   position: relative;
-  z-index: 2; /* above dust */
+  z-index: 5;
 }
 
 /* =============  DUST LAYER  ============= */
@@ -142,7 +145,7 @@ main {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 1; /* over curtains, bars, plants */
+  z-index: -1; /* over curtains, bars, plants */
   pointer-events: none;
 }
 
@@ -169,11 +172,13 @@ main {
     width: 90vw;
     height: calc(90vw * 360 / 810);
   }
+
   .bars {
     background-image:
       repeating-linear-gradient(to right, black 0% 1.9%, transparent 1.9% calc(1.9% + (100% - 6 * 1.9%) / 5)),
       repeating-linear-gradient(to bottom, black 0% 4.2%, transparent 4.2% calc(4.2% + (100% - 3 * 4.2%) / 2));
   }
+
   .name-text { font-size: 2rem; margin-top: 15px; }
   .nickname   { font-size: 1.5rem; }
   .plant1 { width: 49.38%; }
