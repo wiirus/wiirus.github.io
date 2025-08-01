@@ -5,19 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio of Wiirus</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
+  <!-- Core Styles -->
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/layout.css" />
   <link rel="stylesheet" href="styles/components.css" />
   <link rel="stylesheet" href="styles/experience.css" />
+  <link rel="stylesheet" href="styles/links.css" />
   <link rel="stylesheet" href="styles/animations.css" />
   <link rel="stylesheet" href="styles/effects.css" />
   <link rel="stylesheet" href="styles/style.css" />
@@ -31,7 +29,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education & Credentials</a></li>
+      <li><a href="#education">Education &amp; Credentials</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
     </ul>
   </nav>
@@ -51,33 +49,43 @@
 
   <!-- Main Content -->
   <main>
-
-    <!-- Hero Section -->
+    <!-- Hero Section with Right Links -->
     <section id="home" class="hero-scene">
-      <div class="scene">
-        <!-- Plants -->
-        <svg class="plant1" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
-          <image href="assets/images/plant1.png" width="714" height="512" filter="url(#shakeFilter)" />
-        </svg>
-        <svg class="plant2" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
-          <image href="assets/images/plant2.png" width="714" height="512" filter="url(#shakeFilter)" />
-        </svg>
+      <div class="hero-content">
+        <div class="scene">
+          <!-- Curtains -->
+          <img class="curtain curtain-left" src="assets/images/curtainleft.png" alt="Left Curtain">
+          <img class="curtain curtain-right" src="assets/images/curtainright.png" alt="Right Curtain">
 
-        <!-- Branches -->
-        <svg class="leaf-silhouette" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
-          <image href="assets/images/shouette.png" width="714" height="512" filter="url(#shakeFilter)" />
-        </svg>
-        <svg class="leaf-silhouette1" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
-          <image href="assets/images/shouette1.png" width="714" height="512" filter="url(#shakeFilter)" />
-        </svg>
+          <!-- Plants -->
+          <svg class="plant1" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+            <image href="assets/images/plant1.png" width="714" height="512" filter="url(#shakeFilter)" />
+          </svg>
+          <svg class="plant2" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+            <image href="assets/images/plant2.png" width="714" height="512" filter="url(#shakeFilter)" />
+          </svg>
 
-        <!-- Window Bars -->
-        <div class="bars"></div>
+          <!-- Branches -->
+          <svg class="leaf-silhouette" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+            <image href="assets/images/shouette.png" width="714" height="512" filter="url(#shakeFilter)" />
+          </svg>
+          <svg class="leaf-silhouette1" viewBox="0 0 714 512" preserveAspectRatio="xMinYMin meet">
+            <image href="assets/images/shouette1.png" width="714" height="512" filter="url(#shakeFilter)" />
+          </svg>
+
+          <!-- Window Bars -->
+          <div class="bars"></div>
+        </div>
+
+        <div class="name-text">
+          <div>NİSA NUR ÇELİK</div>
+          <div class="nickname">WİİRUS</div>
+        </div>
       </div>
 
-      <div class="name-text">
-        <div>NİSA NUR ÇELİK</div>
-        <div class="nickname">WİİRUS</div>
+      <!-- Right side social links -->
+      <div id="links-container" class="hero-links">
+        <!-- Links will be loaded dynamically by loadLinks.js -->
       </div>
     </section>
 
@@ -92,23 +100,23 @@
       </p>
     </section>
 
-<!-- Experience Section -->
-<section id="experience" class="experience">
-  <h2>Experience</h2>
-  <div id="experience-container" class="bubble-grid"></div>
-</section>
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+      <h2>Experience</h2>
+      <div id="experience-container" class="bubble-grid"></div>
+    </section>
 
-    <!-- Placeholder for future Education Section -->
+    <!-- Education Section -->
     <section id="education" class="about-me">
       <h2>Education</h2>
       <p>Coming soon...</p>
     </section>
-
   </main>
 
   <!-- Scripts -->
   <script src="scripts/dust.js"></script>
-  <script src="scripts/turbulence.js"></script>
   <script src="scripts/loadExperience.js"></script>
+  <script src="scripts/loadLinks.js"></script>
+  <script src="scripts/turbulence.js"></script>
 </body>
 </html>

@@ -52,6 +52,21 @@ main {
   overflow: hidden;
 }
 
+/* Curtains */
+.curtain {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+.curtain-left {
+  left: 0;
+}
+.curtain-right {
+  right: 0;
+}
+
 .bars {
   position: absolute;
   top: 0;
@@ -116,7 +131,6 @@ main {
 .leaf-silhouette, .leaf-silhouette1 {
   position: absolute;
   bottom: -10%;
-  width: 400px;
   height: auto;
   z-index: 1;
   opacity: 1;
@@ -124,8 +138,8 @@ main {
   animation: plant-sway 9s ease-in-out infinite alternate;
 }
 
-.leaf-silhouette  { left: 0%; transform-origin: bottom left;}
-.leaf-silhouette1 { right: 0%; transform-origin: bottom right;}
+.leaf-silhouette  { left: 0%; transform-origin: bottom left; width: 300px; }
+.leaf-silhouette1 { right: 0%; transform-origin: bottom right; width: 400px; }
 
 /* === DUST LAYER === */
 #dust-layer {
@@ -160,48 +174,40 @@ main {
 }
 
 /* === MOBILE RESPONSIVE === */
-/* Mobile responsiveness for the scene */
 @media (max-width: 768px) {
   .scene {
-    width: 90vw; /* Use viewport width instead of fixed pixels */
-    height: calc(90vw * 360 / 810); /* Maintain exact aspect ratio: 360/810 = 0.444 */
+    width: 90vw;
+    height: calc(90vw * 360 / 810);
   }
   
   .bars {
-    /* Use percentage-based bars that scale with the scene container */
     background-image:
       repeating-linear-gradient(to right, black 0% 1.9%, transparent 1.9% calc(1.9% + (100% - 6 * 1.9%) / 5)),
       repeating-linear-gradient(to bottom, black 0% 4.2%, transparent 4.2% calc(4.2% + (100% - 3 * 4.2%) / 2));
   }
   
   .name-text {
-    font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 2rem;
     margin-top: 15px;
   }
   
   .nickname {
-    font-size: 1.5rem; /* Smaller nickname for mobile */
+    font-size: 1.5rem;
   }
   
-  /* Maintain exact plant proportions relative to scene */
-  .plant1 {
-    width: 49.38%; /* Exact ratio: 400px/810px */
-  }
+  .plant1 { width: 49.38%; }
+  .plant2 { width: 67.90%; }
+  .leaf-silhouette, .leaf-silhouette1 { width: 49.38%; }
   
-  .plant2 {
-    width: 67.90%; /* Exact ratio: 550px/810px */
-  }
-  
-  .leaf-silhouette, .leaf-silhouette1 {
-    width: 49.38%; /* Exact ratio: 400px/810px */
+  .curtain {
+    height: 100%;
   }
 }
 
-/* For very small screens */
 @media (max-width: 480px) {
   .scene {
     width: 95vw;
-    height: calc(95vw * 360 / 810); /* Maintain exact aspect ratio */
+    height: calc(95vw * 360 / 810);
   }
   
   .name-text {

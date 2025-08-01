@@ -1,0 +1,62 @@
+/* styles/links.css */
+
+/* Hero-links container sits side-by-side, with a little gap above */
+.hero-links,
+#links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin: 2rem 0 0;    /* add 2rem above to separate from nickname */
+  padding: 0;
+}
+
+/* Each link as an inline-flex button */
+.hero-links a,
+#links-container a {
+  display: inline-flex;
+  align-items: center;
+  color: #ddfff7ad;
+  text-decoration: none;
+  font-family: 'Bangers', sans-serif;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+  padding: 5px 10px;
+}
+
+.hero-links a:hover,
+#links-container a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 8px #ff0000;
+}
+
+/* Icon wrapper for inline SVG */
+.hero-links .link-icon,
+#links-container .link-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.hero-links .link-icon svg,
+#links-container .link-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor; /* Icon matches the link’s color */
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .hero-links,
+  #links-container {
+    gap: 16px;
+    margin-top: 1rem;  /* smaller gap on mobile */
+  }
+  .hero-links a,
+  #links-container a {
+    font-size: 1rem;
+    padding: 4px 6px;
+  }
+}
