@@ -1,0 +1,88 @@
+[
+  {
+    "type": "degree",
+    "title": "Bachelor's Degree in Digital Game Design",
+    "institution": "Beykoz University",
+    "start": "Jan 2022",
+    "end": "Jul 2025",
+    "description": "Focused on algorithms, data structures, and software engineering."
+  },
+  {
+    "type": "certificate",
+    "title": "Advanced 2D Art Techniques",
+    "institution": "Art Academy Online",
+    "start": "Apr 2022",
+    "end": "Jun 2022",
+    "description": "Course on advanced techniques in digital painting and illustration."
+  },
+  {
+    "type": "skill",
+    "category": "IT",
+    "title": "Certified Data Analyst"
+  },
+  {
+    "type": "skill",
+    "category": "IT",
+    "title": "Python"
+  },
+  {
+    "type": "skill",
+    "category": "IT",
+    "title": "SQL"
+  },
+  {
+    "type": "skill",
+    "category": "IT",
+    "title": "AWS"
+  },
+  {
+    "type": "skill",
+    "category": "Art",
+    "title": "Digital Painting"
+  },
+    {
+    "type": "skill",
+    "category": "Art",
+    "title": "Digital Painting"
+  },
+    {
+    "type": "skill",
+    "category": "Art",
+    "title": "Digital Paintingaaaaaaa"
+  },
+  {
+    "type": "skill",
+    "category": "Art",
+    "title": "Illustration"
+  },
+  {
+    "type": "skill",
+    "category": "Art",
+    "title": "Photoshop"
+  },
+  {
+    "type": "skill",
+    "category": "Art",
+    "title": "Procreate"
+  },
+  {
+    "type": "skill",
+    "category": "Office",
+    "title": "Microsoft Excel"
+  },
+  {
+    "type": "skill",
+    "category": "Office",
+    "title": "PowerPoint"
+  },
+  {
+    "type": "skill",
+    "category": "Office",
+    "title": "Google Workspace"
+  },
+  {
+    "type": "skill",
+    "category": "Office",
+    "title": "Project Management"
+  }
+]

@@ -1,0 +1,66 @@
+/* styles/artstation.css */
+
+#portfolio {
+  padding: 3rem 2rem;
+  background: var(--bg-black);
+  color: var(--text-white);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#portfolio h2 {
+  font-family: 'Bangers', cursive;
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--title-color);
+  position: relative;
+}
+#portfolio h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--muted-red);
+  border-radius: 2px;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.art-card {
+  background: var(--card-black);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.art-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.art-card h3 {
+  margin: 0;
+  padding: 0.75rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+}

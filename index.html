@@ -11,10 +11,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap"rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
 
   <!-- Core Styles -->
   <link rel="stylesheet" href="styles/about.css" />
   <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/education.css" />
   <link rel="stylesheet" href="styles/experience.css" />
   <link rel="stylesheet" href="styles/links.css" />
   <link rel="stylesheet" href="styles/navbar.css" />
@@ -34,8 +37,8 @@
         <a href="#portfolio">Portfolio</a>
         <div class="dropdown-menu">
           <a href="#2d-art">2D Art</a>
-          <a href="https://cults3d.com/en/users/wiirus" target="_blank">3D Art</a>
-          <a href="#games">Games</a>
+          <a href="https://cults3d.com/en/users/wiirus" target="_blank">3D Art (Printing)</a>
+          <a href="https://wiirus.itch.io" target="_blank">Games</a>
           <a href="assets/data/nisa_nur_celik_CV.pdf#view=FitH" target="_blank">CV</a>
         </div>
       </li>
@@ -114,7 +117,7 @@
 
           <p>My areas of interest are <span class="highlight">data</span> and <span class="highlight">2D art</span>, but I’ve never stayed in one lane for long. If it’s interesting, I’ll learn it. If it’s broken, I’ll fix it. If it shouldn’t work, I’ll probably try anyway.</p>
 
-          <p>Most of my time goes into building things that feel thoughtful, strange, or just satisfying to use—and the rest goes into side projects I’ll absolutely finish.</p>
+          <p>Most of my time goes into building things that feel thoughtful, strange, or just satisfying to use and the rest goes into side projects I’ll absolutely finish.</p>
 
           <p>Let’s get this bread.</p>
 </div>
@@ -128,17 +131,27 @@
       <div id="experience-container" class="bubble-grid"></div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education">
-      <h2>Education</h2>
-      <p>Coming soon...</p>
-    </section>
-  </main>
+<section id="education" class="education">
+  <!-- ★ THIS MUST BE HERE ★ -->
+  <div class="noise-wrapper">
+    <div class="noise"></div>
+  </div>
+
+  <h2>Education &amp; Credentials</h2>
+  <div class="education-content">
+    <div id="education-degrees" class="degrees"></div>
+    <aside id="education-skills" class="skills"></aside>
+  </div>
+</section>
+
+
 
   <!-- Scripts -->
   <script src="scripts/dust.js"></script>
+  <script src="scripts/loadEducation.js"></script>
   <script src="scripts/loadExperience.js"></script>
   <script src="scripts/loadLinks.js"></script>
+  <script src="scripts/static.js"></script>
   <script src="scripts/turbulence.js"></script>
 </body>
 </html>

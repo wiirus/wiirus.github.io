@@ -1,0 +1,62 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wiirus • 2D Art Portfolio</title>
+
+  <!-- Fonts (same as index.html) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=Indie+Flower&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="styles/about.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/education.css" />
+  <link rel="stylesheet" href="styles/experience.css" />
+  <link rel="stylesheet" href="styles/links.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
+  <link rel="stylesheet" href="styles/reset.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+
+  <!-- ArtStation page styles -->
+  <link rel="stylesheet" href="styles/artstation.css" />
+</head>
+
+<body>
+  <!-- Top Navigation (same structure as index.html) -->
+  <nav class="topbar">
+    <ul>
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About Me</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li class="dropdown">
+        <a href="portfolio.html#portfolio">Portfolio</a>
+        <div class="dropdown-menu">
+          <a href="portfolio.html#portfolio">2D Art</a>
+          <a href="https://cults3d.com/en/users/wiirus" target="_blank">3D Art (Printing)</a>
+          <a href="https://wiirus.itch.io" target="_blank">Games</a>
+          <a href="assets/data/nisa_nur_celik_CV.pdf#view=FitH" target="_blank">CV</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="portfolio" class="education">
+      <h2>2D Art Portfolio</h2>
+      <div id="artstation-container"></div>
+    </section>
+  </main>
+
+  <!-- ArtStation loader -->
+  <script src="scripts/artstationLoader.js"></script>
+</body>
+</html>

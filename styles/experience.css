@@ -1,23 +1,28 @@
+:root {
+  --header-height: 80px;
+}
+
 /* Bulletin‑board wrapper */
 #experience {
   position: relative;
   padding: 18px 12px;
   background: radial-gradient(
     circle at center,
-    #221e2b 0%,
-    #1d1c22 80%,
+    #312a2a 0%,
+    #000000 70%,
     #0f0e11 100%
   );
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 
-  border: 29px solid #272626;
+
+  border: 29px solid #2f2b2b;
   border-radius: 10px;
 
   box-shadow:
     inset 0 0 10px rgba(0, 0, 0, 0.32),
     inset -2px -2px 5px rgba(0, 0, 0, 0.4),
-    0 0 0 2px #2f2a32,
-    0 0 0 13px #505050,
-    0 0 0 16px #0f0f0f,
+    0 0 0 2px #211c1d,
+    0 0 0 13px #383838,
     0 0px 26px rgb(28, 31, 27);
 
   background-clip: padding-box;
@@ -32,7 +37,7 @@
   font-family: 'Schoolbell';
   letter-spacing: 0.15em;
   font-size: 3.5rem;
-  color: rgb(199, 166, 158);
+  color: #ddfff7;
   text-align: center;
   margin-bottom: 18px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
@@ -110,7 +115,7 @@
   width: 2.25rem;
   height: 2.25rem;
   display: block;
-  background: url('/assets/images/pin.png') no-repeat center/contain;
+  background: url('../assets/images/pin.png') no-repeat center/contain;
   z-index: 3;
 }
 

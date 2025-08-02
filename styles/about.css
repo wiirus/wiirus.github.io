@@ -1,5 +1,13 @@
+section#about.about-me > h2.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: 'Bangers', cursive;
+  color: #ddfff7;
+}
+
 /* =============  ABOUT ME SECTION ============= */
-.about-me {
+.about-me{
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
@@ -14,7 +22,6 @@
   text-align: left;
   font-size: 1rem;
   line-height: 1.6;
-  min-height: 100vh;
   justify-content: center;
 }
 
